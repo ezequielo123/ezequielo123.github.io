@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>A greeting to the world</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah|Indie+Flower" rel="stylesheet">
+	<link href="css/hover-min.css" rel="stylesheet" media="all">
+    <link rel="icon" href="images/logo_eo_top.gif" type="image/gif" sizes="16x16">
+    <title>Web-Developer | Ezequiel Orozco</title>
 </head>
 <body>
-    <h1>H1 Content (Change) New</h1>
-    <em><strong title="The greeting">Hello world!</strong></em>
-    <span title="my name">Ezequiel Orozco<span>
+	<div class="container">
+		<div class="first">
+			<a href="index.html"><img src="images/eo_logo.png" class="mypicture"></a>
+			<ul class="topnav" id="myTopnav">
+				<li><a href="#home" class="hvr-underline-from-center">Home</a></li>
+				<li><a href="#news" class="hvr-underline-from-center">Blog</a></li>
+				<li><a href="#blog" class="hvr-underline-from-center">About</a></li>
+				<li><a href="#contact" class="hvr-underline-from-center">Contact</a></li>
+				<li class="icon">
+					<a href="javascript:void(0);" style="font-size:35px;" class="theicon" onclick="myFunction()">☰ Menu</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="myinfo">
+			<h1>Hello.</h1>
+			<p>My name is <span class="myname">Ezequiel Orozco</span>. I am a front-end web developer based out of Rosario, Argentina. I build, evolve, and maintain websites that meet web standards and best practices.</p>
+		</div>
+
+	</div>
+	<script>
+		function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className += "topnav";
+		}
+		}
+	</script>
 </body>
 </html>

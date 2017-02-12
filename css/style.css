@@ -1,0 +1,97 @@
+body {
+  margin:0;
+  background: #558C89;
+  font-family: 'Amatic SC', cursive;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-left: 450px; 
+}
+
+.myname {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+ul.topnav li {
+  float: right;
+  margin-left: 20px;
+  margin-right: 20px;
+  }
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.8s;
+  font-size: 40px;
+}
+
+
+ul.topnav li.icon {
+  display: none;
+}
+
+.myinfo > h1 {
+    font-size: 65px;
+    font-weight: bold;
+    color: #ECECEA;
+}
+
+.myinfo {
+    padding-left: 110px;
+    padding-top: 150px;
+    height: 200px;
+    max-width: 530px;
+}
+
+.myinfo > p {
+    font-size: 35px;
+    color: #ECECEA;
+}
+
+img.mypicture {
+    width: 130px;
+    height: auto;
+}
+
+.first {
+    display: flex;
+    padding-left: 110px;
+    padding-top: 40px;
+}
+
+
+
+
+@media screen and (max-width:1210px) {
+  ul.topnav li {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:480px) {
+  ul.topnav li {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+  .myinfo {
+      padding-left: 20px;
+      padding-top: 20px;
+      height: 200px;
+      max-width: 530px;
+    }
+    .first {
+      display: flex;
+      padding-left: 20px;
+      padding-top: 20px;
+    }
+}
