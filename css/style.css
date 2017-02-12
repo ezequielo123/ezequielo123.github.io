@@ -4,23 +4,45 @@ body {
   font-family: 'Amatic SC', cursive;
 }
 
-ul.topnav {
-  list-style-type: none;
-  margin: 0 auto;
-  overflow: hidden;
-  padding-left: 450px; 
-}
-
 .myname {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 55px;
 }
 
 ul.topnav li {
-  float: right;
+  float: left;
   margin-left: 20px;
   margin-right: 20px;
-  }
+  padding-top: 30px;
+}
+
+.myinfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+p.my-name {
+    max-width: 490px;
+    overflow: hidden;
+    align-self: center;
+    padding-left: 250px;
+    font-size: 45px;
+    color: #ECECEA;
+}
+
+img.my-picture {
+    width: 30%;
+    height: auto;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 
 ul.topnav li a {
   display: inline-block;
@@ -28,70 +50,37 @@ ul.topnav li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  transition: 0.8s;
-  font-size: 40px;
+  transition: 0.3s;
+  font-size: 47px;
 }
 
-
-ul.topnav li.icon {
-  display: none;
+ul.topnav li a:hover {
+  font-weight: bold;
 }
 
-.myinfo > h1 {
-    font-size: 65px;
-    font-weight: bold;
-    color: #ECECEA;
-}
+ul.topnav li.icon {display: none;}
 
-.myinfo {
-    padding-left: 110px;
-    padding-top: 150px;
-    height: 200px;
-    max-width: 530px;
-}
-
-.myinfo > p {
-    font-size: 35px;
-    color: #ECECEA;
-}
-
-img.mypicture {
-    width: 130px;
-    height: auto;
-}
-
-.first {
-    display: flex;
-    padding-left: 110px;
-    padding-top: 40px;
-}
-
-
-
-
-@media screen and (max-width:1210px) {
-  ul.topnav li {display: none;}
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
   ul.topnav li.icon {
     float: right;
     display: inline-block;
   }
 }
 
-@media screen and (max-width:480px) {
-  ul.topnav li {display: none;}
-  ul.topnav li.icon {
-    float: right;
-    display: inline-block;
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
-  .myinfo {
-      padding-left: 20px;
-      padding-top: 20px;
-      height: 200px;
-      max-width: 530px;
-    }
-    .first {
-      display: flex;
-      padding-left: 20px;
-      padding-top: 20px;
-    }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
 }
