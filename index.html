@@ -1,44 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Piedra, Papel o Tijera</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah|Indie+Flower" rel="stylesheet">
-	<link href="css/hover-min.css" rel="stylesheet" media="all">
-    <link rel="icon" href="images/logo_eo_top.gif" type="image/gif" sizes="16x16">
-    <title>Web-Developer | Ezequiel Orozco</title>
-</head>
-<body>
-	<div class="container-full">
-		<div class="container">
-			<ul class="topnav" id="myTopnav">
-				<li><a href="home.html" class="hvr-underline-from-center">Home</a></li>
-				<li><a href="about.html" class="hvr-underline-from-center">About</a></li>
-				<li><a href="projects.html" class="hvr-underline-from-center">Projects</a></li>
-				<li><a href="contact.html" class="hvr-underline-from-center">Contact</a></li>
-				<li class="icon">
-					<a href="javascript:void(0);" style="font-size:35px;" class="theicon" onclick="myFunction()">☰ Menu</a>
-				</li>
-			</ul>
-		</div>
+  </head>
+  <body>
+    <header>
+      <h1>Piedra, Papel o Tijera</h1>
+    </header>
+    <div class="score-board">
+      <div id="user-label" class="badge">Usuario</div>
+      <div id="computer-label" class="badge">Computer</div>
+      <span id="user-score">0</span>:<span id="computer-score">0</span>
+      <br>
+      <span id="draw-score">0</span>
+    </div>
 
-		<div class="myinfo">
-			<p class="my-name">My name is <span class="myname">Ezequiel Orozco</span>. I am a Full Stack (PHP) developer based out of Rosario, Argentina. I build, evolve, and maintain websites that meet web standards and best practices.</p>
-			<img src="images/ezequiel.png" class="my-picture">
-		</div>
+    <div class="result">
+      <h3>Papel envuelve a la roca. Ganaste!</h3>
+    </div>
 
-	</div>
+    <div class="choices">
+      <div class="choice" id="r">
+        <img src="images/piedra.png" alt="piedra">
+      </div>
+      <div class="choice" id="p">
+        <img src="images/papel.png" alt="papel">
+      </div>
+      <div class="choice" id="s">
+        <img src="images/tijera.png" alt="tijera">
+      </div>
+    </div>
 
-	<script>
-		function myFunction() {
-		var x = document.getElementById("myTopnav");
-		if (x.className === "topnav") {
-			x.className += " responsive";
-		} else {
-			x.className += "topnav";
-		}
-		}
-	</script>
-
-</body>
+    <p id="action-message">Make your move!</p>
+    <script src="js/app.js"></script>
+  </body>
 </html>
